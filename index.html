@@ -64,7 +64,9 @@
     <main class="container">
       <section class="section hero-section">
         <h1 class="hero-heading">EFFECTIVE SOLUTIONS FOR YOUR BUSINESS</h1>
-        <button class="request-service-button">Request our service</button>
+        <button data-modal-open class="request-service-button">
+          Request our service
+        </button>
       </section>
 
       <section class="section what-we-offer-section">
@@ -499,5 +501,13 @@
         </div>
       </div>
     </footer>
+
+    <div class="modal is-hidden" data-modal>
+      <div class="modal-content">
+        <button class="close-button" data-modal-close>&times;</button>
+        Continutul modalului
+      </div>
+    </div>
+    <script src="./js/modal.js"></script>
   </body>
 </html>

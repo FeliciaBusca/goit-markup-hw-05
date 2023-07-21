@@ -7,6 +7,7 @@
   --address-color: white;
   --background-accent-color: #2f303a;
   --hero-heading-color: white;
+  --transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 * {
   margin: 0;
@@ -63,6 +64,9 @@ footer {
 button {
   cursor: pointer;
 }
+a {
+  transition: color var(--transition);
+}
 .section {
   padding: 94px 0px 94px 0px;
 }
@@ -107,6 +111,7 @@ button {
 .contact-links-header .e-mail-icon svg:hover,
 .contact-links-header .e-mail-icon svg:focus {
   color: var(--accent-color);
+  transition: backround-color var(--transition);
 }
 
 .contact-links-header .phone-number-icon svg {
@@ -380,18 +385,15 @@ footer address .contact-link-footer {
   background-color: var(--accent-color);
 }
 .social-icon-list .social-icon-list-link svg {
-  fill: #afb1b8;
   color: #afb1b8;
-}
-.social-icon-list .social-icon-list-link svg:hover,
-.social-icon-list .social-icon-list-link svg:focus {
-  fill: #fff;
-  color: #fff;
-}
-.social-icon-list-link svg {
   width: 20px;
   height: 20px;
 }
+.social-icon-list .social-icon-list-link svg:hover,
+.social-icon-list .social-icon-list-link svg:focus {
+  color: #fff;
+}
+
 .portfolio-navigation-list {
   display: flex;
   justify-content: center;
@@ -558,4 +560,39 @@ footer h3 {
 .social-icon-list-link-footer svg {
   width: 20px;
   height: 20px;
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.modal-content {
+  padding: 16px;
+  background-color: white;
+  width: 528px;
+  margin: 0 auto;
+  height: 581px;
+  position: relative;
+  border-radius: 4px;
+}
+.is-hidden {
+  visibility: hidden;
+}
+.close-button {
+  width: 30px;
+  height: 30px;
+  border: 1px solid #0000001a;
+  border-radius: 50%;
+  background-color: transparent;
+  color: #000000;
+  outline: none;
+  position: absolute;
+  right: 8px;
+  top: 8px;
 }
