@@ -134,9 +134,20 @@ a {
   text-align: left;
   color: var(--heading-color);
 }
-.global-header .main-navigation,
+.global-header .main-navigation a {
+  position: relative;
+}
 .global-header .main-navigation a:active {
   color: var(--accent-color);
+}
+.global-header .main-navigation a:active::after {
+  content: "";
+  position: absolute;
+  bottom: -7px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: var(--accent-color);
 }
 
 .global-header .main-navigation,
@@ -627,6 +638,9 @@ footer h3 {
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+.modal::backdrop {
 }
 .modal-content {
   padding: 16px;
