@@ -111,7 +111,7 @@ a {
 .contact-links-header .e-mail-icon svg:hover,
 .contact-links-header .e-mail-icon svg:focus {
   color: var(--accent-color);
-  transition: backround-color var(--transition);
+  transition: background var(--transition);
 }
 
 .contact-links-header .phone-number-icon svg {
@@ -290,6 +290,9 @@ footer address .contact-link-footer {
   gap: 30px;
   margin-top: 50px;
 }
+.what-we-do-img {
+  width: 370px;
+}
 .what-we-do-section .what-we-do-heading {
   font-size: 36px;
   font-weight: 700;
@@ -298,7 +301,28 @@ footer address .contact-link-footer {
   text-align: center;
   color: var(--heading-color);
 }
-
+.what-we-do-cards {
+  position: relative;
+}
+.overlay-text {
+  font-family: var(--text-font-family);
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 16px;
+  letter-spacing: 0.03em;
+  text-align: center;
+  color: white;
+  background-color: #2f303acc;
+  background-size: cover;
+  opacity: 80%;
+  width: 370px;
+  height: 70px;
+  position: absolute;
+  bottom: 4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 .our-team-section .member-cards {
   display: flex;
   justify-content: center;
@@ -383,6 +407,8 @@ footer address .contact-link-footer {
 .social-icon-list .social-icon-list-link:hover,
 .social-icon-list .social-icon-list-link:focus {
   background-color: var(--accent-color);
+  color: #fff;
+  transition: background var(--transition);
 }
 .social-icon-list .social-icon-list-link svg {
   color: #afb1b8;
@@ -392,6 +418,7 @@ footer address .contact-link-footer {
 .social-icon-list .social-icon-list-link svg:hover,
 .social-icon-list .social-icon-list-link svg:focus {
   color: #fff;
+  transition: color var(--transition);
 }
 
 .portfolio-navigation-list {
@@ -433,22 +460,19 @@ footer address .contact-link-footer {
 .regular-customers-list .regular-customer-icon svg:hover,
 .regular-customers-list .regular-customer-icon svg:focus {
   color: var(--accent-color);
+  transition: color var(--transition);
 }
 
 .portfolio-navigation .portfolio-navigation-button {
-  width: 120px;
-  height: 38px;
-  top: 174px;
-  left: 614px;
   border-radius: 4px;
   font-size: 16px;
-
   font-weight: 500;
   line-height: 26px;
   letter-spacing: 0.03em;
   text-align: center;
   color: var(--heading-color);
   border: none;
+  padding: 6px 22px;
 }
 .portfolio-navigation .portfolio-navigation-button:hover,
 .portfolio-navigation .portfolio-navigation-button:focus {
@@ -456,6 +480,7 @@ footer address .contact-link-footer {
   border-radius: 4px;
   box-shadow: 0px 3px 1px 0px #0000001a;
   color: var(--hero-heading-color);
+  transition: background var(--transition);
 }
 
 .portfolio-list {
@@ -464,20 +489,22 @@ footer address .contact-link-footer {
   align-items: center;
   width: 100%;
   gap: 30px;
+  margin-top: 30px;
 }
 .portfolio-project {
   width: 370px;
   height: 404px;
-  top: 262px;
-  left: 215px;
   border: 1px solid #eeeeee;
+}
+.portfolio-project-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 22px;
+  padding-top: 20px;
 }
 .portfolio-project,
 .portfolio-project:hover {
-  box-shadow: 1px 4px 6px 0px #00000029;
-
-  box-shadow: 0px 4px 4px 0px #0000000f;
-
   box-shadow: 0px 1px 1px 0px #0000001f;
 }
 .portfolio-items h3 {
@@ -495,13 +522,41 @@ footer address .contact-link-footer {
   letter-spacing: 0.03em;
   text-align: left;
 }
-.portfolio-items div {
-  padding-left: 24px;
-  padding-right: 24px;
-  padding-bottom: 20px;
-}
+
 .portfolio-items {
   margin-top: 50px;
+}
+
+.portfolio-project-img {
+  position: relative;
+}
+
+.portfolio-project-overlay {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-left: 22px;
+  padding-right: 22px;
+  font-family: var(--text-font-family);
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 28px;
+  letter-spacing: 0.03em;
+  text-align: left;
+  background-color: var(--accent-color);
+  opacity: 90%;
+  color: white;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  overflow: hidden;
+  width: 100%;
+  height: 0;
+  transition: 0.8s ease;
+}
+.portfolio-project-img:hover .portfolio-project-overlay {
+  height: 100%;
 }
 
 footer address {
@@ -548,6 +603,7 @@ footer h3 {
 .social-icon-list-footer .social-icon-list-link-footer:hover,
 .social-icon-list-footer .social-icon-list-link-footer:focus {
   background-color: var(--accent-color);
+  transition: var(--transition);
 }
 .social-icon-list-footer .social-icon-list-link-footer svg {
   color: #fff;
